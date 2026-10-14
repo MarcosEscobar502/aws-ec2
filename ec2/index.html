@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende sobre el modelo OSI y TCP/IP, sus capas, funciones y diferencias.">
+    <title>Modelos de Red | OSI y TCP/IP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo"><span>◈</span> NetLearn</a>
+            <div class="nav-links">
+                <a href="#osi">Modelo OSI</a>
+                <a href="#tcpip">Modelo TCP/IP</a>
+                <a href="#comparacion">Comparación</a>
+            </div>
+            <button id="themeBtn" class="theme-btn" aria-label="Cambiar tema">
+                ☾
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <span class="tag">FUNDAMENTOS DE REDES</span>
+            <h1>Entendiendo los modelos<br><span>OSI y TCP/IP</span></h1>
+            <p>
+                Descubre cómo se comunican los dispositivos a través de las redes,
+                desde las aplicaciones hasta la transmisión física de los datos.
+            </p>
+            <div class="hero-buttons">
+                <a href="#osi" class="btn primary">Explorar modelo OSI</a>
+                <a href="#tcpip" class="btn secondary">Explorar TCP/IP</a>
+            </div>
+            <div class="hero-stats">
+                <div><strong>7</strong><span>Capas OSI</span></div>
+                <div><strong>4</strong><span>Capas TCP/IP</span></div>
+                <div><strong>1</strong><span>Objetivo: comunicar</span></div>
+            </div>
+        </section>
+
+        <section id="osi" class="section container">
+            <div class="section-heading">
+                <span class="tag">01 / MODELO DE REFERENCIA</span>
+                <h2>Modelo OSI</h2>
+                <p>
+                    El modelo de Interconexión de Sistemas Abiertos organiza
+                    la comunicación de red en siete capas conceptuales.
+                </p>
+            </div>
+
+            <div class="model-layout">
+                <div class="layers osi-layers">
+                    <button class="layer layer-7 active"
+                        data-model="osi" data-layer="7">
+                        <span class="layer-number">07</span>
+                        <span><strong>Aplicación</strong><small>HTTP, DNS, SMTP</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                    <button class="layer layer-6"
+                        data-model="osi" data-layer="6">
+                        <span class="layer-number">06</span>
+                        <span><strong>Presentación</strong><small>Formato, cifrado, compresión</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                    <button class="layer layer-5"
+                        data-model="osi" data-layer="5">
+                        <span class="layer-number">05</span>
+                        <span><strong>Sesión</strong><small>Gestión de sesiones</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                    <button class="layer layer-4"
+                        data-model="osi" data-layer="4">
+                        <span class="layer-number">04</span>
+                        <span><strong>Transporte</strong><small>TCP, UDP</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                    <button class="layer layer-3"
+                        data-model="osi" data-layer="3">
+                        <span class="layer-number">03</span>
+                        <span><strong>Red</strong><small>IP, enrutamiento</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                    <button class="layer layer-2"
+                        data-model="osi" data-layer="2">
+                        <span class="layer-number">02</span>
+                        <span><strong>Enlace de datos</strong><small>Ethernet, MAC</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                    <button class="layer layer-1"
+                        data-model="osi" data-layer="1">
+                        <span class="layer-number">01</span>
+                        <span><strong>Física</strong><small>Cables, señales, conectores</small></span>
+                        <span class="layer-arrow">↗</span>
+                    </button>
+                </div>
+
+                <article class="detail-card">
+                    <span class="detail-label">CAPA SELECCIONADA</span>
+                    <div id="layerIcon" class="detail-icon">🌐</div>
+                    <h3 id="layerTitle">7. Aplicación</h3>
+                    <p id="layerDescription">
+                        Proporciona servicios de red a las aplicaciones
+                        que utiliza el usuario.
+                    </p>
+                    <div class="detail-info">
+                        <strong>Ejemplos</strong>
+                        <p id="layerExamples">HTTP, DNS, SMTP</p>
+                    </div>
+                    <div class="detail-info">
+                        <strong>Función principal</strong>
+                        <p id="layerFunction">
+                            Permitir que las aplicaciones accedan a los
+                            servicios de comunicación de la red.
+                        </p>
+                    </div>
+                    <p class="hint">Selecciona otra capa para conocerla.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="tcpip" class="section section-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">02 / ARQUITECTURA DE INTERNET</span>
+                    <h2>Modelo TCP/IP</h2>
+                    <p>
+                        Es la arquitectura de protocolos que permite la
+                        comunicación en Internet y en muchas redes actuales.
+                    </p>
+                </div>
+
+                <div class="tcp-grid">
+                    <article class="tcp-card">
+                        <span class="tcp-number">04</span>
+                        <div class="tcp-icon">💻</div>
+                        <h3>Aplicación</h3>
+                        <p>Ofrece protocolos y servicios utilizados por las aplicaciones.</p>
+                        <div class="protocols">HTTP · DNS · SMTP</div>
+                        <small>Incluye funciones OSI de aplicación, presentación y sesión.</small>
+                    </article>
+
+                    <article class="tcp-card">
+                        <span class="tcp-number">03</span>
+                        <div class="tcp-icon">🔄</div>
+                        <h3>Transporte</h3>
+                        <p>Gestiona la comunicación entre procesos y el transporte de datos.</p>
+                        <div class="protocols">TCP · UDP</div>
+                        <small>Corresponde a la capa de transporte del modelo OSI.</small>
+                    </article>
+
+                    <article class="tcp-card">
+                        <span class="tcp-number">02</span>
+                        <div class="tcp-icon">🌐</div>
+                        <h3>Internet</h3>
+                        <p>Permite direccionar y encaminar paquetes entre redes.</p>
+                        <div class="protocols">IP · ICMP</div>
+                        <small>Se relaciona principalmente con la capa de red OSI.</small>
+                    </article>
+
+                    <article class="tcp-card">
+                        <span class="tcp-number">01</span>
+                        <div class="tcp-icon">🔌</div>
+                        <h3>Acceso a la red</h3>
+                        <p>Gestiona el envío de datos por la red local y el medio físico.</p>
+                        <div class="protocols">Ethernet · Wi-Fi</div>
+                        <small>Agrupa funciones de las capas física y enlace OSI.</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparacion" class="section container">
+            <div class="section-heading">
+                <span class="tag">03 / DIFERENCIAS</span>
+                <h2>OSI vs. TCP/IP</h2>
+                <p>Dos modelos útiles para entender y estudiar las redes.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Modelo OSI</th>
+                            <th>Modelo TCP/IP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Número de capas</td>
+                            <td>7</td>
+                            <td>4 (modelo de cuatro capas)</td>
+                        </tr>
+                        <tr>
+                            <td>Propósito</td>
+                            <td>Modelo de referencia conceptual</td>
+                            <td>Arquitectura de protocolos de red</td>
+                        </tr>
+                        <tr>
+                            <td>Transporte</td>
+                            <td>Capa 4</td>
+                            <td>Capa 3</td>
+                        </tr>
+                        <tr>
+                            <td>Direccionamiento IP</td>
+                            <td>Capa 3: Red</td>
+                            <td>Capa 2: Internet</td>
+                        </tr>
+                        <tr>
+                            <td>Uso principal</td>
+                            <td>Aprendizaje y diagnóstico</td>
+                            <td>Comunicación real en Internet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-banner">
+                <span>💡</span>
+                <p>
+                    <strong>Recuerda:</strong> OSI es un modelo de referencia
+                    de siete capas. TCP/IP agrupa varias de esas funciones en
+                    cuatro capas. Son modelos relacionados, pero no idénticos.
+                </p>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <div class="container quiz-content">
+                <span class="tag">PON A PRUEBA TUS CONOCIMIENTOS</span>
+                <h2>¿Qué modelo conoces mejor?</h2>
+                <p>Responde una pregunta rápida sobre los fundamentos de redes.</p>
+                <div class="quiz-card">
+                    <h3>¿En qué capa del modelo OSI trabaja principalmente el protocolo IP?</h3>
+                    <div id="quizOptions" class="quiz-options">
+                        <button data-answer="wrong">Transporte</button>
+                        <button data-answer="correct">Red</button>
+                        <button data-answer="wrong">Presentación</button>
+                        <button data-answer="wrong">Física</button>
+                    </div>
+                    <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+                    <button id="resetQuiz" class="btn secondary">Volver a intentar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="logo"><span>◈</span> NetLearn</a>
+            <p>Proyecto académico · Fundamentos de redes</p>
+            <p>Desplegado con Ubuntu Server, Nginx y Amazon EC2.</p>
+        </div>
+    </footer>
+</body>
+</html>
